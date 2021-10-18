@@ -24,7 +24,7 @@ node{
 '''
    }*/
    stage('Deploy to Tomcat'){
-     sh "scp -o StrictHostKeyChecking=no target\\JenkinsWar.war \"${tomcatWeb}\\JenkinsWar.war\""
+     sh "scp -o StrictHostKeyChecking=no /var/jenkins_home/workspace/shreya-training/samp_pipe3/target/JenkinsWar.war \"${tomcatWeb}\\JenkinsWar.war\""
    }
       stage ('Start Tomcat Server') {
          sleep(time:5,unit:"SECONDS") 
